@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>stackr (beta)</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<%= stylesheet_link_tag "style.css", "ui-lightness/jquery-ui-1.8.custom.css" %> 
+	<%= javascript_include_tag "jquery-1.4.2.min.js", "jquery-ui-1.8.min.js", "jquery.md5.js", "stackr.js", "main.js" %>
+</head>
+<body>
+	<div id="wrapper">
+    	<div id="header" class="clearfix">
+			<h1><a href="#">stack<span>r</span></a></h1>
+			<p>Stack the blocks! Fight the clock!</p>
+			<ul>
+				<li><a href="#" id="linktop">Top Stackrs</a></li>
+			</ul>
+        </div>
+        <div id="content" class="clearfix">
+			<!-- we hardcode these elements here to improve page loading speed and to prevent browser freezing -->
+        	<div id="grid">
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+				<div class="clearfix"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+			</div>
+			<div id="controls">
+				<ul>
+					<li><label for="lines">lines made</label><span id="lines">0</span></li>
+					<li><button id="newgame">New Game</button></li>
+				</ul>
+				<div id="how-to">
+					<h3>How?</h3>
+					<ol>
+						<li>Press <strong>SPACEBAR</strong> to stop the bar and place it on desired block area.</li>
+						<li>Speed of bar increases every line.</li>
+						<li>Game ends when you have a bar not stacked on top of a previous one.</li>
+					</ol>
+				</div>
+			</div>
+        </div>
+        <div id="footer" class="clearfix">
+			<p>design and code by <a href="#">ricecake</a></p>
+        </div>
+    </div>
+	<div style="display: none;" id="bar" class="bar"><em></em><em></em><em></em><em></em></div>
+	<input type="hidden" id="stackr_token" value="<%= @token %>"><!-- this element will be removed once the javascript has retrieved its value -->
+</body>
+</html>
