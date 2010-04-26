@@ -228,7 +228,8 @@ $.widget('ui.stackr', {
 				this._currentRow = this._rowLines[this._rowLines.length - (this._levelLinesCtr + 1)]; // let's move to the upper row
 			}
 			
-			if ( this._currentSpeed > 20 ) this._currentSpeed -= 20; // increase speed, we deduct 20 ms from the interval
+			var speedinc = this._currentSpeed * .05;
+			if ( this._currentSpeed > 30 ) this._currentSpeed -= speedinc; // increase speed
 			this._startRow();
 		}
 	},

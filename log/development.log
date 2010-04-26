@@ -2135,3 +2135,79 @@ Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 23:18:21) [GET
   [4;35;1mScore Load (0.6ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-25 15:18:21' ) ORDER BY lines_made DESC LIMIT 10[0m
   [4;36;1mScore Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
 Completed in 31ms (View: 15, DB: 4) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-26 23:36:26) [GET]
+Rendering home/index
+Completed in 383ms (View: 375, DB: 1) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-26 23:37:38) [POST]
+  Parameters: {"hash"=>"a2e9d43297a6e6cdaf11efb147513515", "username"=>"oink", "lines_made"=>"37"}
+  [4;36;1mScore Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.9ms)[0m   [0;1mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-26 15:37:38', '2010-04-26 15:37:38', 'oink', 37)[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 6) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-26 23:39:26) [GET]
+Rendering home/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-26 23:40:04) [POST]
+  Parameters: {"hash"=>"cbd91438be9b8efb024672463ebe97ad", "username"=>"erick", "lines_made"=>"21"}
+  [4;36;1mScore Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.5ms)[0m   [0;1mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-26 15:40:04', '2010-04-26 15:40:04', 'erick', 21)[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mCOMMIT[0m
+Completed in 23ms (View: 1, DB: 5) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-26 23:41:20) [GET]
+Rendering home/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-26 23:43:49) [POST]
+  Parameters: {"hash"=>"bbcaf532405cd184ff66231b8e6e7954", "username"=>"rice", "lines_made"=>"53"}
+  [4;36;1mScore Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.9ms)[0m   [0;1mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-26 15:43:49', '2010-04-26 15:43:49', 'rice', 53)[0m
+  [4;35;1mSQL (9.6ms)[0m   [0mCOMMIT[0m
+Completed in 27ms (View: 1, DB: 13) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-26 23:45:09) [POST]
+  Parameters: {"hash"=>"890d10012bae349ab086d9609d38fe13", "username"=>"rice", "lines_made"=>"44"}
+  [4;36;1mScore Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.4ms)[0m   [0;1mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-26 15:45:09', '2010-04-26 15:45:09', 'rice', 44)[0m
+  [4;35;1mSQL (29.4ms)[0m   [0mCOMMIT[0m
+Completed in 49ms (View: 1, DB: 31) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 23:45:10) [GET]
+  [4;36;1mScore Load (0.8ms)[0m   [0;1mSELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (1.2ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-03-26 15:45:10' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.5ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-19 15:45:10' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (0.5ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-25 15:45:10' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+Completed in 194ms (View: 17, DB: 4) | 200 OK [http://stackr.local/scores/]
