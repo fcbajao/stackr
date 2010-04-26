@@ -33,6 +33,8 @@ $.widget('ui.stackr', {
 	
 	_gameIsActive: false, // indicates if game is running or not
 	
+	_inputDialog: null, // handle for modal dialog box of username input
+	
 	_username: '', // username
 	
 	_token: '', // token from server
@@ -121,9 +123,20 @@ $.widget('ui.stackr', {
 	_startRow: function() {
 		// clone the previous bar element then place it on the current row
 		this._activeBar = this._prevBar.clone();
-		this._activeBar.appendTo(this._currentRow).css('left', 0).show();
+		
 		this._currentIndexLimit = (this._blocksPerLine - 1) - (this._currentBarLength - 1);
-		this._currIndex = 0;
+		
+		// we switch starting position of bar every new row
+		if ( (this._linesCount % 2) == 0 ) {
+			// start from left				
+			this._currIndex = 0;
+		} else {
+			// start from right	
+			this._currIndex = this._currentIndexLimit;
+		}
+		
+		var leftpos = this._currIndex * this._cwidth;
+		this._activeBar.appendTo(this._currentRow).css('left', leftpos).show();	
 		this._moveBar();
 	},
 	
@@ -230,7 +243,7 @@ $.widget('ui.stackr', {
 		var formMarkup = '<div id="stackr_form"><p>You have survived '+this._linesCount+' lines!</p><p>Enter your name.</p><p class="error"></p>' +
 		'<input type="text" id="stackr_username" maxlength="30" name="stackr_username" value="'+this._username+'" />' +
 		'<button id="stackr_submit_username">Submit</button></div>';
-		$(formMarkup).appendTo('body').dialog({
+		this._inputDialog = $(formMarkup).appendTo('body').dialog({
 			title: 'Game Over',
 			modal: true,
 			draggable: false,
@@ -264,8 +277,16 @@ $.widget('ui.stackr', {
 	
 	_showFormOk: function() {
 		var elem = $('#stackr_form');
+		var me = this;
 		if ( elem.length > 0 ) {
-			elem.html('<p>Your score has been submitted. Look at the Top Stackrs and see if you made it. Thanks for playing!</p>');
+			elem.html('<p>Your score has been submitted. Look at the <a href="#">Top Stackrs</a> and see if you made it. Thanks for playing!</p>');
+			
+			// attach event listener to top stackrs link
+			elem.find('a').click(function() {
+				me.showTopStackrs();
+				me._inputDialog.dialog('close');
+				return false;
+			});
 		}
 	},
 	
