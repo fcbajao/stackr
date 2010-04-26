@@ -297,6 +297,13 @@ h6 {}
 				width: 360px;
 				margin-right: 20px;
 			}
+			#stackr_form a {
+				color: #FF5A00;
+				font-weight: bold;
+			}
+			#stackr_form a:hover {
+				text-decoration: underline;
+			}
 		#footer {
 			
 		}
