@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20100416072714) do
 
   create_table "scores", :force => true do |t|
-    t.string   "username", :limit => 30, :null => false
-    t.integer  "lines",                  :null => false
-    t.datetime "created",                :null => false
-    t.datetime "modified",               :null => false
+    t.string   "username"
+    t.integer  "lines_made"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

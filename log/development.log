@@ -1639,3 +1639,247 @@ Processing ScoresController#index (for 192.168.56.1 at 2010-04-22 16:45:36) [GET
   [4;35;1mScore Load (0.6ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-21 08:45:36' ) ORDER BY lines_made DESC LIMIT 10[0m
   [4;36;1mScore Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
 Completed in 102ms (View: 15, DB: 4) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-22 17:15:10) [GET]
+Rendering home/index
+Completed in 71ms (View: 61, DB: 1) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-22 17:15:19) [GET]
+  [4;36;1mScore Load (0.5ms)[0m   [0;1mSELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (1.1ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-03-22 09:15:19' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.7ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-15 09:15:19' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (0.5ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-21 09:15:19' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+Completed in 111ms (View: 17, DB: 4) | 200 OK [http://stackr.local/scores/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-22 17:15:58) [POST]
+  Parameters: {"hash"=>"fa0ef6d3e731ffd55973c1afb2c5b3d0", "username"=>"cooler", "lines_made"=>"19"}
+  [4;35;1mScore Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScore Create (0.6ms)[0m   [0mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-22 09:15:58', '2010-04-22 09:15:58', 'cooler', 19)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 20ms (View: 1, DB: 3) | 200 OK [http://stackr.local/scores/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-22 17:16:15) [GET]
+  [4;35;1mScore Load (0.6ms)[0m   [0mSELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.7ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-03-22 09:16:15' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (0.5ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-15 09:16:15' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.6ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-21 09:16:15' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+Completed in 31ms (View: 15, DB: 4) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-26 15:54:40) [GET]
+Rendering home/index
+Completed in 114ms (View: 104, DB: 1) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 15:57:54) [GET]
+  [4;36;1mScore Load (26.3ms)[0m   [0;1mSELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (1.0ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-03-26 07:57:54' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.8ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-19 07:57:54' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (0.5ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-25 07:57:54' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+Completed in 201ms (View: 14, DB: 30) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateScores (20100416072714)
+  [4;36;1mSQL (16.2ms)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `linesmade` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100416072714')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `scores`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `scores`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-26 18:31:58) [GET]
+Rendering home/index
+Completed in 405ms (View: 395, DB: 1) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-26 18:32:04) [POST]
+  Parameters: {"hash"=>"37984002bac2aebb7b1d339c5e735d78", "username"=>"ahoy", "lines_made"=>"4"}
+  [4;36;1mScore Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: lines_made):
+  app/controllers/scores_controller.rb:11:in `new'
+  app/controllers/scores_controller.rb:11:in `create'
+  /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:374:in `start_request_handler'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:330:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:163:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/phusion_passenger/passenger-spawn-server:61
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 18:32:33) [GET]
+  [4;35;1mScore Load (0.0ms)[0m   [0mMysql::Error: Unknown column 'lines_made' in 'field list': SELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'lines_made' in 'field list': SELECT username, lines_made FROM `scores`  ORDER BY lines_made DESC LIMIT 10):
+  app/controllers/scores_controller.rb:37:in `index'
+  /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:374:in `start_request_handler'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:330:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:163:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/phusion_passenger/passenger-spawn-server:61
+
+Rendered rescues/_trace (58.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateScores (20100416072714)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 18:33:07) [GET]
+  [4;36;1mScore Load (0.0ms)[0m   [0;1mMysql::Error: Table 'stackr_development.scores' doesn't exist: SELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'stackr_development.scores' doesn't exist: SELECT username, lines_made FROM `scores`  ORDER BY lines_made DESC LIMIT 10):
+  app/controllers/scores_controller.rb:37:in `index'
+  /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:374:in `start_request_handler'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:330:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:163:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/phusion_passenger/passenger-spawn-server:61
+
+Rendered rescues/_trace (49.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateScores (20100416072714)
+  [4;35;1mSQL (7.0ms)[0m   [0mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `lines_made` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100416072714')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `scores`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `scores`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 18:33:53) [GET]
+  [4;35;1mScore Load (0.7ms)[0m   [0mSELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.9ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-03-26 10:33:53' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (0.8ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-19 10:33:54' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.5ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-25 10:33:54' ) ORDER BY lines_made DESC LIMIT 10[0m
+Completed in 103ms (View: 1, DB: 3) | 200 OK [http://stackr.local/scores/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-26 18:34:08) [POST]
+  Parameters: {"hash"=>"93fd783e2f7bc6b1391aa7c1995c0fd4", "username"=>"ahoy", "lines_made"=>"8"}
+  [4;35;1mScore Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScore Create (0.7ms)[0m   [0mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-26 10:34:08', '2010-04-26 10:34:08', 'ahoy', 8)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 28ms (View: 1, DB: 7) | 200 OK [http://stackr.local/scores/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 18:34:10) [GET]
+  [4;35;1mScore Load (1.3ms)[0m   [0mSELECT username, lines_made FROM `scores` ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.5ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-03-26 10:34:10' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Load (0.7ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-19 10:34:10' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;36;1mScore Load (0.6ms)[0m   [0;1mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-25 10:34:10' ) ORDER BY lines_made DESC LIMIT 10[0m
+  [4;35;1mScore Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+Completed in 24ms (View: 7, DB: 5) | 200 OK [http://stackr.local/scores/]
