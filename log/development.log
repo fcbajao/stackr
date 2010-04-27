@@ -2211,3 +2211,64 @@ Processing ScoresController#index (for 192.168.56.1 at 2010-04-26 23:45:10) [GET
   [4;35;1mScore Load (0.5ms)[0m   [0mSELECT username, lines_made FROM `scores` WHERE (updated_at >= '2010-04-25 15:45:10' ) ORDER BY lines_made DESC LIMIT 10[0m
   [4;36;1mScore Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
 Completed in 194ms (View: 17, DB: 4) | 200 OK [http://stackr.local/scores/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-28 02:23:06) [GET]
+Rendering home/index
+Completed in 481ms (View: 474, DB: 1) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-28 02:23:21) [POST]
+  Parameters: {"hash"=>"c869a9b064433dec5782cdc479874a88", "username"=>"azxs", "lines_made"=>"1"}
+
+NoMethodError (undefined method `xhr' for #<ActionController::Request:0x7f41e6dec8d8>):
+  app/controllers/scores_controller.rb:5:in `create'
+  /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:374:in `start_request_handler'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:330:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:163:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /usr/lib/phusion_passenger/passenger-spawn-server:61
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.56.1 at 2010-04-28 02:24:32) [GET]
+Rendering home/index
+Completed in 425ms (View: 416, DB: 0) | 200 OK [http://stackr.local/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ScoresController#create (for 192.168.56.1 at 2010-04-28 02:24:57) [POST]
+  Parameters: {"hash"=>"43c1d563204456bd5be0a803cb4acb24", "username"=>"weee", "lines_made"=>"1"}
+  [4;36;1mScore Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (2.4ms)[0m   [0;1mINSERT INTO `scores` (`created_at`, `updated_at`, `username`, `lines_made`) VALUES('2010-04-27 18:24:58', '2010-04-27 18:24:58', 'weee', 1)[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mCOMMIT[0m
+Completed in 443ms (View: 2, DB: 9) | 200 OK [http://stackr.local/scores/]

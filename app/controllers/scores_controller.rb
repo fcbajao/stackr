@@ -1,32 +1,39 @@
 class ScoresController < ApplicationController
 
 	def create
-		# hash the passed lines_made with the token in the session
-		require "digest"
-		hash = Digest::MD5.hexdigest(session[:token] + params[:lines_made])
-		
-		# confirm that score is valid, hashes should match
-		if hash == params[:hash]
-	
-			@score = Score.new(
-			:username => params[:username],
-			:lines_made => params[:lines_made]
-			)
+		# check first if its an AJAX request
+		if request.xhr?
+			# hash the passed lines_made with the token in the session
+			require "digest"
+			hash = Digest::MD5.hexdigest(session[:token] + params[:lines_made])
 			
-			respond_to do |format|
-				if @score.save
-					format.html { render :json => { :stat => "OK" } }
-				else
-					format.html { render :json => { :stat => "FAIL", :msg => "A problem occurred while submitting your score.  Please try again." } }
+			# confirm that score is valid, hashes should match
+			if hash == params[:hash]
+		
+				@score = Score.new(
+				:username => params[:username],
+				:lines_made => params[:lines_made]
+				)
+				
+				respond_to do |format|
+					if @score.save
+						format.html { render :json => { :stat => "OK" } }
+					else
+						format.html { render :json => { :stat => "FAIL", :msg => "A problem occurred while submitting your score.  Please try again." } }
+					end
 				end
+			
+			else
+			
+				respond_to do |format|
+					format.html { render :json => { :stat => "FAIL", :msg => "Invalid score.  Please try again." } }
+				end
+			
 			end
-		
 		else
-		
 			respond_to do |format|
-				format.html { render :json => { :stat => "FAIL", :msg => "Invalid score.  Please try again." } }
+				format.html { render :json => { :stat => "FAIL", :msg => "Invalid request.  Please try again." } }
 			end
-		
 		end
 	end
 	
