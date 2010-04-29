@@ -5,3 +5,38 @@
 #
 # two:
 #   column: value
+1:
+  username: erick
+  lines_made: 30
+  created_at: <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %>
+  updated_at: <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %>
+  
+2:
+  username: ricecake
+  lines_made: 40
+  created_at: <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %>
+  updated_at: <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %>
+  
+3:
+  username: foo
+  lines_made: 30
+  created_at: <%= 1.week.ago %>
+  updated_at: <%= 1.week.ago %>
+  
+4:
+  username: bar
+  lines_made: 35
+  created_at: <%= 1.week.ago %>
+  updated_at: <%= 1.week.ago %>
+  
+5:
+  username: james
+  lines_made: 34
+  created_at: <%= 1.month.ago %>
+  updated_at: <%= 1.month.ago %>
+  
+6:
+  username: jen
+  lines_made: 33
+  created_at: <%= 1.month.ago %>
+  updated_at: <%= 1.month.ago %>
