@@ -38,8 +38,6 @@ class ScoresController < ApplicationController
 	end
 	
 	def index
-		time_now = Time.now.to_i
-		
 		# get the top 10 All-time
 		scores_all = Score.all(:select => "username, lines_made", :limit => 10, :order => "lines_made DESC")
 		
