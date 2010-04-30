@@ -4,6 +4,6 @@ class HomeControllerTest < ActionController::TestCase
   test "should return home page" do
 	get :index
 	assert_response :success
-	assert_select "#newgames"
+	assert_select "#newgame"
   end
 end
